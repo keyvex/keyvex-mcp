@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.keyvex/keyvex",
+  "title": "KeyVex",
+  "description": "US public financial disclosures for AI agents: Congress trades, SEC filings, FEC, lobbying, more",
+  "version": "0.102.0",
+  "websiteUrl": "https://keyvex.com",
+  "icons": [
+    {
+      "src": "https://keyvex.com/favicon-512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.keyvex.com"
+    },
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.keyvex.com/pro",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer kvx_live_... key from a free KeyVex account (keyvex.com). Clients that can sign in may skip it.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
